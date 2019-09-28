@@ -1,0 +1,17 @@
+{
+    "_id" : ObjectId("5cf9cdad84ca1c358914e462"),
+    "survey" : "survey",
+    "company" : "ITH",
+    "users" : [ 
+        {
+            "username" : "admin",
+            "email" : "admin",
+            "role" : "Admin",
+            "department" : "new",
+            "userid" : "1",
+            "activateSurvey" : "",
+            "isValid" : "true",
+            "password" : "admin"
+        }
+    ]
+}

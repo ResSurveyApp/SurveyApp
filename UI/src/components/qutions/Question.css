@@ -1,0 +1,10 @@
+/* Question Component */
+.question {
+    /* border:1px solid blue; */
+    /* border-right:10px; */
+    margin-right: 25%;
+    /* background:#eee; */
+    /* padding:5px; margin:px; */
+
+    overflow-x: hidden;
+  }

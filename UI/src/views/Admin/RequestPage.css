@@ -1,0 +1,25 @@
+
+.Newcard{
+    width: 60%;
+    margin-left: 15vw;
+    text-align: center;
+    height:250px;
+    margin-top: 10vw;
+}
+/*.Maincard{
+    border: "2px solid red";
+    background-image: url("https://cdn.lynda.com/course/606079/606079-636402166307474915-16x9.jpg");
+    background-size: contain;
+    background-repeat: no-repeat
+}*/
+
+.Newbutton{
+    margin-right:20px !important;
+    background-color: #217ba7 !important;
+    color:white!important;
+    font-size: 14px !important;
+}
+
+.image-class{
+    font-size: 14px !important;
+  }

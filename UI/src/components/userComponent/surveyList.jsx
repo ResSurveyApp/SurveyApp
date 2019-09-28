@@ -758,6 +758,7 @@ return true
       return null
     })
   }
+  
 
   render() {
 
@@ -797,19 +798,46 @@ return true
           <Row md={12}>
             <Col md={12}>
               <Cards>
-              <CardHeader color="info">
-                {this.state.map.map( sector => ( ( this.state[sector].length !== 0 && this.state.tabState === sector) ?  
+              <CardHeader color="rose">
                 <Toolbar className={classes.tool}>
                   <Typography variant="h4" color="inherit" align="left" className={classes.lgrow}>
-                  {this.state[sector + this.state[sector][this.state[sector + "ActiveStep"]] + "ref"]}
+                  <Typography variant="h5" color="inherit" align="left" className={classes.grow}>
+                    REFERENCE
+                  </Typography>
+                  <br/>
                   </Typography>
                   <Typography variant="h4" color="inherit" align="center" className={classes.cgrow}>
-                  {/* <Box textAlign="justify" m={1}> */}
-                  {this.state[sector + this.state[sector][this.state[sector + "ActiveStep"]] + "ref_desc"]}
-                  {/* </Box> */}
+                  <Typography variant="h5" color="inherit" align="center" className={classes.grow}>
+                    METRIC EXPLANATION
                   </Typography>
-                  <Typography variant="h4" color="inherit" align="right" className={classes.rgrow} >
+                  <br/>
+                  </Typography>
+                  <Typography variant="h4" color="inherit" align="right" className={classes.rgrow}>
+                  <Typography variant="h5" color="inherit" align="right" className={classes.grow} >
+                    NIST FUNCTION
+                  </Typography> 
+                  <br/>
+                  </Typography> 
+                </Toolbar>
+              </CardHeader>
+              <CardHeader color="info">
+                {this.state.map.map( sector => ( ( this.state[sector].length !== 0 && this.state.tabState === sector) ?  
+                
+                <Toolbar className={classes.tool}>
+                  <Typography variant="h4" color="inherit" align="left" className={classes.lgrow}>
+                  <Typography variant="h5" color="inherit" align="left" className={classes.grow}>
+                  {this.state[sector + this.state[sector][this.state[sector + "ActiveStep"]] + "ref"]}
+                  </Typography>
+                  </Typography>
+                  <Typography variant="h4" color="inherit" align="center" className={classes.cgrow}>
+                  <Typography variant="h5" color="inherit" align="center" className={classes.grow}>
+                  {this.state[sector + this.state[sector][this.state[sector + "ActiveStep"]] + "ref_desc"]}
+                  </Typography>
+                  </Typography>
+                  <Typography variant="h4" color="inherit" align="right" className={classes.rgrow}>
+                  <Typography variant="h5" color="inherit" align="right" className={classes.igrow} >
                   {this.state[sector + this.state[sector][this.state[sector + "ActiveStep"]] + "nist"]}
+                  </Typography>
                   </Typography> 
         </Toolbar> : null))}
               </CardHeader>

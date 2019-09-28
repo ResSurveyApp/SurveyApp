@@ -83,18 +83,48 @@ const dashboardStyle = {
   },
   lgrow: {
     flexGrow: 1,
+    width: '20%',
+    // marginRight: '50px',
+    marginLeft: '-2%'
     // borderRight: '2px solid #af2cc5',
   },
   cgrow: {
     flexGrow: 1,
+    width: '60%',
+    // marginLeft: '1%',
+    margin: '5px 5px',
+    
+    // marginTop: '-55px',
     // border: '2px solid #af2cc5',
-    borderRight: '2px solid #af2cc5',
-    borderLeft: '2px solid #af2cc5',
+    // borderRight: '2px solid #af2cc5',
+    // borderLeft: '2px solid #af2cc5',
     // border: '2px solid #af2cc5',
   },
   rgrow: {
+    width: '16%',
     flexGrow: 1,
-    // borderLeft: '2px solid #af2cc5',
+    marginRight: '-2%'
+    // margin: 't'
+    // marginTop: '-5px',
+  },
+  igrow: {
+
+    // paddingTop : '-30px',
+    
+    flexGrow: 1,
+
+    // marginTop: '-5px',
+    // marginBottom: 'px'
+    // position: 'relative'
+  },ngrow: {
+
+    // paddingTop : '-30px',
+    
+    flexGrow: 1,
+
+    // marginTop: '-3px',
+    // marginBottom: '10px'
+    // position: 'relative'
   },
   menuButton: {
     marginLeft: 12,

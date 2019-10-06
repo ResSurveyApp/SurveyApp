@@ -1,0 +1,13 @@
+[Unit]
+Description=UWSGI instance to serve backend application developed by python
+After=network.target
+
+[Service]
+WorkingDirectory=/apps/workspace/SERVICES
+Environment="PATH=/apps/workspace/SERVICES/venv/bin"
+Restart=always
+RestartSec=5s
+ExecStart=/apps/workspace/SERVICES/venv/bin/uwsgi --ini /apps/workspace/SERVICES/uwsgi.ini
+
+[Install]
+WantedBy=multi-user.target

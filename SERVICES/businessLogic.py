@@ -142,7 +142,6 @@ def mongoConnect(host,base,colection,user,pwd):
 def changeAdminPassword(user,pwd):
 
     db, _ = mongoConnect("localhost", "Surveyapp", "userdetails", "user", "pwd")
-    doc = db.find({'users.username': user, 'survey': 'survey', 'company': 'ITH' }, {'users':1,  '_id' : 0})
     db.update({'users.username': user, 'survey': 'survey', 'company': 'ITH' }, {"$set": {"users.$.password": en_de_crypt("Don12345", "encrypt")}})
     return "Password Updated"
 

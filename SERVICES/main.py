@@ -177,6 +177,14 @@ def companyNames():
     print(companies_list)
     return json.dumps(companies_list)
 
+@app.route('/backend/changePassword', methods=['GET', 'POST'])
+def changeAdminPassword():
+    user='admin'
+    pwd=request.args.get('password')
+    check = bl.changeAdminPassword(user, pwd)
+    print(check, "SDSDSDS")
+    return "Admin Password Updated"
+
 @app.route('/backend/companySurveyNames', methods=['GET', 'POST'])
 def companySurveyNames():
     company = request.args.get('company')

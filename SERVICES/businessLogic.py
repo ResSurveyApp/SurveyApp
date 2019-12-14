@@ -139,11 +139,16 @@ def mongoConnect(host,base,colection,user,pwd):
     col = db[colection]
     return col,db
 
-def changeAdminPassword(user,pwd):
+def changeAdminPassword(user,cpwd,npwd):
 
     db, _ = mongoConnect("localhost", "Surveyapp", "userdetails", "user", "pwd")
-    db.update({'users.username': user, 'survey': 'survey', 'company': 'ITH' }, {"$set": {"users.$.password": en_de_crypt(pwd, "encrypt")}})
-    return "Password Updated"
+    password = loads(dumps(db.find({'users.username': user, 'survey': 'survey', 'company': 'ITH' }, {'users.password':1,  '_id' : 0})))
+    db_pwd = en_de_crypt(password[0]['users'][0]['password'], "decrypt")
+    if db_pwd == cpwd:
+        db.update({'users.username': user, 'survey': 'survey', 'company': 'ITH' }, {"$set": {"users.$.password": en_de_crypt(npwd, "encrypt")}})
+        return "Password Updated"
+    else:
+        return "Current Admin Passord is Wrong"
 
 # load json to questions collection
 def pushMongoDB(host,database,collection,jsonFile,user,pwd,survey,company):

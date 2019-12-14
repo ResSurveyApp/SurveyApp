@@ -180,10 +180,10 @@ def companyNames():
 @app.route('/backend/changePassword', methods=['GET', 'POST'])
 def changeAdminPassword():
     user='admin'
-    pwd=request.args.get('password')
-    check = bl.changeAdminPassword(user, pwd)
-    print(check, "SDSDSDS")
-    return "Admin Password Updated"
+    cpwd=request.args.get('currentpassword')
+    npwd=request.args.get('newpassword')
+    check = bl.changeAdminPassword(user, cpwd, npwd)
+    return check
 
 @app.route('/backend/companySurveyNames', methods=['GET', 'POST'])
 def companySurveyNames():

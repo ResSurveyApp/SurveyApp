@@ -10,7 +10,7 @@ docx==0.2.4
 docxtpl==0.5.17
 et-xmlfile==1.0.1
 Flask==1.0.2
-Flask-Cors==3.0.7
+Flask-Cors==3.0.9
 Flask-Mail==0.9.1
 idna==2.8
 itsdangerous==1.1.0
